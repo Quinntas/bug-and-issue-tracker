@@ -1,15 +1,16 @@
-from fastapi import Request, HTTPException
+from fastapi import Request
 
+from src.python.exceptions.exceptions import ErrorCode
 from src.python.services import encryption
 
 
 def token_required(handler):
     async def wrapper(request: Request, *args, **kwargs):
         if 'x-access-token' not in request.headers.keys():
-            raise HTTPException(status_code=400, detail="BAD REQUEST")
+            raise ErrorCode(400)
 
         if encryption.verify_access_token(request.headers['x-access-token']) is False:
-            raise HTTPException(status_code=401, detail="UNAUTHORIZED")
+            raise ErrorCode(401)
 
         return await handler(*args, **kwargs)
 

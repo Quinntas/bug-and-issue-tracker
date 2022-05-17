@@ -1,0 +1,6 @@
+[05/17/2022-18:06:51] INTERNAL SERVER ERROR LOG 
+- URL: http://192.168.100.58/user/login
+- Client: 192.168.100.58:63713
+- Body: {}
+- Headers: Headers({'authorization': 'Basic Y2Fpb3F1aW5zdGFzc2FudGlhZ29AZ21haWwuY29tOkNoYXZlY2hhdmUxMjM0', 'content-type': 'text/plain', 'user-agent': 'PostmanRuntime/7.29.0', 'accept': '*/*', 'postman-token': 'e7b30a6e-53e4-4631-855f-528615e7aca5', 'host': '192.168.100.58:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '2'})
+
